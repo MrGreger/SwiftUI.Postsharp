@@ -5,14 +5,14 @@ SwiftUI.Postsharp is addin for PostSharp
 ```
 class Program
 {
-[State] private int Count { get; set; } = 0;
+	[State] private int Count { get; set; } = 0;
 
-public string String => $"Count is: {Count}";
+	public string String => $"Count is: {Count}";
 
-static void Main(string[] args)
-{
-    Console.WriteLine("Hello World!");
-}
+	static void Main(string[] args)
+	{
+	    Console.WriteLine("Hello World!");
+	}
 }
 ```
 
@@ -23,15 +23,13 @@ private State<int> <StateWeaverGenerated>_Count = new State<int>(0);
 
 private int Count
 {
-	[CompilerGenerated]
 	get
 	{
-		return <StateWeaverGenerated>_Count.get_Value();
+		return <StateWeaverGenerated>_Count;
 	}
-	[CompilerGenerated]
 	set
 	{
-		<StateWeaverGenerated>_Count.set_Value(value);
+		<StateWeaverGenerated>_Count.Value  = value;
 	}
 }
 
@@ -41,7 +39,7 @@ private static void Main(string[] args)
 {
 	Console.WriteLine("Hello World!");
 }
-}
+
 
 ```
 
