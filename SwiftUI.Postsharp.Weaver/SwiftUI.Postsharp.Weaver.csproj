@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <!-- PostSharp doesn't actually modify the weaver assembly, so we can save some build time by disabling it here: -->
+    <SkipPostSharp>True</SkipPostSharp>
+    <LangVersion>8</LangVersion>
+    <!-- We're using dependency injection for service importing: -->
+    <NoWarn>CS0649</NoWarn>
+    <RootNamespace>SwiftUI.Postsharp.Weaver</RootNamespace>
+    <AssemblyName>SwiftUI.Postsharp.Weaver</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PostSharp" Version="6.9.8" />
+    <PackageReference Include="PostSharp.Compiler.Engine" Version="6.9.8" />
+    <PackageReference Include="Xamarin.SwiftUI" Version="0.2.134-pre" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SwiftUI.Postsharp.Attributes\SwiftUI.Postsharp.Attributes.csproj" />
+  </ItemGroup>
+
+</Project>

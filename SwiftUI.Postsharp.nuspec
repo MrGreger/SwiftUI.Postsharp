@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>SwiftUI.Postsharp</id>
+    <version>1.0</version>
+    <title>SwiftUI.Postsharp</title>
+    <authors>German Matisov</authors>
+    <owners></owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">Unlicense</license>
+    <projectUrl>https://github.com/postsharp/PostSharp.Community.HelloWorld</projectUrl>
+    <icon>icon.png</icon>
+    <description>SwiftUI State<T> field generator</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright></copyright>
+    <tags>postsharp ilweaving addin plugin SwiftUI</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.1">
+		<!-- PostSharp respects semantic versioning, so it is safe to add a dependency up to the next major version, but not included. -->
+        <dependency id="PostSharp" version="[6.9.8,7.0)" />
+      </group>
+    </dependencies>
+  </metadata>
+
+  <files>
+    <file src="Client\bin\Release\netstandard2.1\PostSharp.Community.HelloWorld.dll" target="lib\netstandard2.1"/>
+    <file src="Client\bin\Release\netstandard2.1\PostSharp.Community.HelloWorld.xml" target="lib\netstandard2.1"/>
+    <file src="Weaver\bin\Release\netstandard2.1\PostSharp.Community.HelloWorld.Weaver.dll" target="tools"/>
+    <file src="icon.png" target="" />
+  </files>
+</package>

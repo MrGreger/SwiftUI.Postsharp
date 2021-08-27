@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <IsPackable>false</IsPackable>
+
+    <!-- Normally, PostSharp searches for weaver assemblies in the tools directories of NuGet packages. But, since we're
+        using the weaver directly instead of using it in a NuGet package here, we must add the weaver to the PostSharp
+        search path manually: -->
+    <PostSharpSearchPath>..\SwiftUI.Postsharp.Weaver\bin\$(Configuration)\netstandard2.1</PostSharpSearchPath>
+    <RootNamespace>Postsharp.WeaverTest</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    <PackageReference Include="PostSharp" Version="6.9.8" />
+    <PackageReference Include="Xamarin.SwiftUI" Version="0.2.134-pre" />
+      <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="3.0.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SwiftUI.Postsharp.Weaver\SwiftUI.Postsharp.Weaver.csproj" />
+    <ProjectReference Include="..\SwiftUI.Postsharp.Attributes\SwiftUI.Postsharp.Attributes.csproj" />
+  </ItemGroup>
+
+  <!--Uncomment to attach debugger-->
+  
+  <!--<PropertyGroup>
+    <PostSharpAttachDebugger>True</PostSharpAttachDebugger>
+    <PostSharpHost>Native</PostSharpHost>
+  </PropertyGroup>-->
+
+</Project>
