@@ -12,7 +12,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="PostSharp" Version="6.9.8" />
     <PackageReference Include="PostSharp.Compiler.Engine" Version="6.9.8" />
     <PackageReference Include="Xamarin.SwiftUI" Version="0.2.134-pre" />
   </ItemGroup>

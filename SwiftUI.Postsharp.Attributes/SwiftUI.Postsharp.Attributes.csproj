@@ -5,6 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="PostSharp" Version="6.9.8" />
+    <PackageReference Include="PostSharp.Redist" Version="6.9.8" />
   </ItemGroup>
 </Project>
